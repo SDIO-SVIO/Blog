@@ -1,0 +1,33 @@
+body {
+	margin: 0px;
+	font-family: 'Lato', sans-serif;
+}
+#logo {
+	text-decoration: none;
+	display: inline;
+	font-size: 25px;
+	user-select: none;
+	padding: 20px;
+}
+#navbar {
+	display: inline-block;
+	margin-left: 20px;
+}
+#navbar a {
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	padding: 20px;
+	height: max-content;
+	border-bottom: 4px solid transparent;
+	display: inline;
+}
+#navbar a:hover {
+	color: navy;
+	border-bottom-color: navy;
+	transition: 1200ms ease;
+}
+header {
+	border-bottom: 1.50px solid gainsboro;
+	padding: 21px;
+}
