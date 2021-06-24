@@ -16,9 +16,9 @@
 	    var document = $(html);
 
 	    // find all links ending with .pdf 
-	    document.find('a[href$=.pdf]').each(function() {
+	    document.find('a[href$=.md]').each(function() {
 		var mdName = $(this).text();
-		var mdfUrl = $(this).attr('href');
+		var mdUrl = $(this).attr('href');
 
 		// do what you want here 
 	    })
