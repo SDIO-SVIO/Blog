@@ -7,24 +7,6 @@
 		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	</head>
 	<body>
-      <script>
-	const fs = require('fs');
-
-	// directory path
-	const dir = './posts/';
-
-	// list all files in the directory
-	fs.readdir(dir, (err, files) => {
-	    if (err) {
-		throw err;
-	    }
-
-	    // files object contains all files names
-	    // log them on console
-	    files.forEach(file => {
-		console.log(file);
-	    });
-	});
-      </script>
+      <script src="node.js"></script>
 	</body>
 </html>
