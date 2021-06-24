@@ -8,20 +8,22 @@
 	</head>
 	<body>
       <script>
-	var mdFilesDirectory = '/posts/';
+	const fs = require('fs');
 
-	// get auto-generated page 
-	$.ajax({url: mdFilesDirectory}).then(function(html) {
-	    // create temporary DOM element
-	    var document = $(html);
+	// directory path
+	const dir = './node_modules/';
 
-	    // find all links ending with .pdf 
-	    document.find('a[href$=.md]').each(function() {
-		var mdName = $(this).text();
-		var mdUrl = $(this).attr('href');
+	// list all files in the directory
+	fs.readdir(dir, (err, files) => {
+	    if (err) {
+		throw err;
+	    }
 
-		// do what you want here 
-	    })
+	    // files object contains all files names
+	    // log them on console
+	    files.forEach(file => {
+		console.log(file);
+	    });
 	});
       </script>
 	</body>
