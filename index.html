@@ -16,5 +16,23 @@
 					<a href="./devdiary.html">Devdiary</a>
 				</div>
 		</header>
+		
+      <script>
+	var mdFilesDirectory = '/posts/';
+
+	// get auto-generated page 
+	$.ajax({url: mdFilesDirectory}).then(function(html) {
+	    // create temporary DOM element
+	    var document = $(html);
+
+	    // find all links ending with .pdf 
+	    document.find('a[href$=.md]').each(function() {
+		var mdName = $(this).text();
+		var mdUrl = $(this).attr('href');
+
+		// do what you want here 
+	    })
+	});
+      </script>
 	</body>
 </html>
